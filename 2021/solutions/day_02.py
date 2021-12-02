@@ -1,4 +1,4 @@
-from typing import Iterable, Tuple, final
+from typing import Iterable, Tuple
 from advent_util import read_input, write_output
 from functools import reduce
 
