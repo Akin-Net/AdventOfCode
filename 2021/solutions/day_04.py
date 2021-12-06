@@ -30,8 +30,6 @@ def calculate_score(results: List[int], winner: List[List[int]]) -> int:
         for k in j:
             if k not in results:
                 unmarked_sum += k
-    print(unmarked_sum)
-    print(results[-1])
     return unmarked_sum * results[-1]
 
 def part_one(lines: List[str]) -> str:
@@ -51,8 +49,6 @@ def part_two(lines: List[str]) -> str:
             last_winner = winner
             boards.remove(winner)
             winner = find_winner(results[:i], boards)
-        print(results[:i])
-        print(winner)
         if len(boards) < 1:
             break
     return str(calculate_score(results[:i], last_winner))
